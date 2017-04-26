@@ -7,11 +7,7 @@
     </head>
     <body>
         <h1>
-            <% 
-            String nom = request.getParameter("nom");
-            String prenom = request.getParameter("prenom");
-            out.println("JSP Hello World!" + nom + " " + prenom);
-            %>
+            JSP Hello World!<%= request.getParameter("nom") %> <%= request.getParameter("prenom") %>
         </h1>
     </body>
 </html>
