@@ -7,8 +7,15 @@
     </head>
     <body>
         <%! int compteur = 0; %>
+        <%
+        String monNom = request.getParameter("nom");
+        String monPrenom = request.getParameter("prenom");
+        
+        monNom = (monNom != null ? monNom : "MonNom");
+        monPrenom = (monPrenom != null ? monPrenom : "MonPrenom");
+        %>
         <h1>
-            JSP Hello World!<%= request.getParameter("nom") %> <%= request.getParameter("prenom") %><br/>
+            JSP Hello World!<%= monNom %> <%= monPrenom %><br/>
             <p>Appel numéro N<%= compteur++ %></p>
         </h1>
     </body>
