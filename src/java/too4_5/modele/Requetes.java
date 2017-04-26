@@ -2,6 +2,7 @@ package too4_5.modele;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -51,5 +52,37 @@ public class Requetes {
         }
         
         return liste;
+    }
+    
+    public static boolean addPersonne(Personne p) {
+        Connection conn;
+        try {
+            conn = getConnection();
+        } catch (Exception e) {
+            return false;
+        }
+        
+        PreparedStatement stmt = null;
+        String query = "INSERT INTO PERSONNE(NOM, PRENOM) VALUES(?, ?)";
+        
+        
+        try {
+            stmt = conn.prepareStatement(query);
+            stmt.setString(1, p.getNom());
+            stmt.setString(2, p.getPrenom());
+            stmt.executeUpdate();
+        } catch (Exception e) {
+            return false;
+        } finally {
+            try {
+                if (stmt != null) { 
+                    stmt.close();
+                } 
+            } catch (Exception e) {
+                
+            }
+        }
+        
+        return true;
     }
 }

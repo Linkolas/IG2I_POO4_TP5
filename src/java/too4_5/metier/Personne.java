@@ -44,4 +44,8 @@ public class Personne {
         return false;
     }
     
+    public boolean enregistrer() {
+        return Requetes.addPersonne(this);
+    }
+    
 }
