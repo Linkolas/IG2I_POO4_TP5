@@ -12,6 +12,7 @@
         <jsp:setProperty name="personne" property="prenom" param="prenom"/>
         <h1>
             JSP Hello World!<%= personne.getNom() %> <%= personne.getPrenom() %><br/>
+            <%= personne.isKnown() %>
         </h1>
     </body>
 </html>

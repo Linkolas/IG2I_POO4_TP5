@@ -1,5 +1,8 @@
 package too4_5.metier;
 
+import java.util.List;
+import too4_5.modele.Requetes;
+
 public class Personne {
     private String nom = "MonNom";
     private String prenom = "MonPrenom";
@@ -27,6 +30,18 @@ public class Personne {
 
     public void setPrenom(String prenom) {
         this.prenom = prenom;
+    }
+    
+    public boolean isKnown() {
+        List<Personne> personnes = Requetes.getPersonnes();
+        
+        for(Personne p: personnes) {
+            if(p.nom.equals(nom) && p.prenom.equals(prenom)) {
+                return true;
+            }
+        }
+        
+        return false;
     }
     
 }
