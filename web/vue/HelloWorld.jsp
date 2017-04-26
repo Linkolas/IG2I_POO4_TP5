@@ -18,7 +18,7 @@
         Personne personne = new Personne(monNom, monPrenom);
         %>
         <h1>
-            JSP Hello World!<%= personne.getNom() %> <%= personne.getPrenom() %><br/>
+            JSP Hello World!<c:out value="${personne.getNom()}"/> <c:out value="${personne.getPrenom()}"/><br/>
             <p>Appel numéro N<%= compteur++ %></p>
         </h1>
     </body>
