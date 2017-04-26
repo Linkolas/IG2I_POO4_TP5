@@ -1,3 +1,4 @@
+<%@page import="too4_5.metier.Personne"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,9 +14,11 @@
         
         monNom = (monNom != null ? monNom : "MonNom");
         monPrenom = (monPrenom != null ? monPrenom : "MonPrenom");
+        
+        Personne personne = new Personne(monNom, monPrenom);
         %>
         <h1>
-            JSP Hello World!<%= monNom %> <%= monPrenom %><br/>
+            JSP Hello World!<%= personne.getNom() %> <%= personne.getPrenom() %><br/>
             <p>Appel numéro N<%= compteur++ %></p>
         </h1>
     </body>
