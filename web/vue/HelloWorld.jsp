@@ -6,7 +6,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <% int compteur = 0; %>
+        <%! int compteur = 0; %>
         <h1>
             JSP Hello World!<%= request.getParameter("nom") %> <%= request.getParameter("prenom") %><br/>
             <p>Appel numéro N<%= compteur++ %></p>
