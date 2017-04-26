@@ -6,9 +6,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1><% 
-            String message = "Hello World!";
-            out.println("<h1>" + message + "</h1>");
+        <h1>
+            <% 
+            String nom = request.getParameter("nom");
+            String prenom = request.getParameter("prenom");
+            out.println("JSP Hello World!" + nom + " " + prenom);
             %>
         </h1>
     </body>
