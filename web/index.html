@@ -13,11 +13,12 @@ and open the template in the editor.
     </head>
     <body>
         <div>
-            <form action="/TP_POO4_5/vue/HelloWorld.jsp" method="get">
+            <form action="/TP_POO4_5/vue/controleur.jsp" method="get">
                 <label for="prenom">Prenom</label>
                 <input type="text" id="prenom" name="prenom" placeholder="prenom"/><br/>
                 <label for="nom">Nom</label>
                 <input type="text" id="nom" name="nom" placeholder="nom"/><br/>
+                <input type="hidden" name="action" value="verif"/>
                 <input type="submit"/>
             </form>
         
