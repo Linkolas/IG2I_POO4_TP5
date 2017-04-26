@@ -6,8 +6,10 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <% int compteur = 0; %>
         <h1>
-            JSP Hello World!<%= request.getParameter("nom") %> <%= request.getParameter("prenom") %>
+            JSP Hello World!<%= request.getParameter("nom") %> <%= request.getParameter("prenom") %><br/>
+            <p>Appel numéro N<%= compteur++ %></p>
         </h1>
     </body>
 </html>
