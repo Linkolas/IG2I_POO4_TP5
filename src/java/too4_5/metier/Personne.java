@@ -1,8 +1,8 @@
 package too4_5.metier;
 
 public class Personne {
-    private String nom = "";
-    private String prenom = "";
+    private String nom = "MonNom";
+    private String prenom = "MonPrenom";
     
     public Personne() {
         
